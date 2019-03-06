@@ -56,6 +56,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.afAuth.authState.subscribe( user => {
+      if (!user) { return; }
       this.profileService.saveUid(user.uid);
       this.subscribeToProfile();
     });
@@ -82,8 +83,6 @@ export class ProfileComponent implements OnInit {
   }
 
   updateForm(profile) {
-
-    console.log(profile.pic);
     
     // name
     this.profileForm.get('name').setValue(profile.name);

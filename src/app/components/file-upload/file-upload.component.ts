@@ -67,9 +67,10 @@ export class FileUploadComponent {
     // Progress monitoring
     this.percentage = this.task.percentageChanges();
     this.snapshot   = this.task.snapshotChanges().pipe(
-      // The file's download URL
+      // The file's download URL 
       finalize(() => {
-        this.downloadURL = fileRef.getDownloadURL().subscribe(url => {
+        this.downloadURL = fileRef.getDownloadURL();
+        this.downloadURL.subscribe(url => {
           if(url) {
             this.profileService.updateProfilePic(url);
           }

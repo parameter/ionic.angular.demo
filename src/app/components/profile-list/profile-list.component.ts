@@ -12,7 +12,7 @@ export class ProfileListComponent implements OnInit {
 
   constructor(private profileService: ProfileService) { }
 
-  living_factors: Object<any> = {
+  living_factors = {
     '4': 'rainbow-flag.svg',
     '5': 'house.svg',
     '6': 'apartments.svg',
