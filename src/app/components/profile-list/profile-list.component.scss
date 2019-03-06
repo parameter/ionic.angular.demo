@@ -1,0 +1,58 @@
+.profile-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    &__profile {
+        flex: 0 0 25%;
+        padding: 0 10px 40px 10px;
+    }
+
+    &__profile-img-holder {
+        display: block;
+        position: relative;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+    }
+
+    &__profile-img-holder:before{
+        content: "";
+        display: block;
+        padding-top: 100%; 	/* initial ratio of 1:1*/
+    }
+
+    &__profile-img {
+        position:  absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__profile-title {
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+    }
+
+    &__profile-icons {
+        display: block;
+        text-align: center;
+    }
+
+    &__profile-icon {
+        width: 40px;
+        margin: 0 6px;
+    }
+
+    &__actions {
+        text-align: center;
+    }
+
+    &__action {
+        padding: 10px;
+        margin: 25px 10px 20px 10px;
+    }
+
+} 

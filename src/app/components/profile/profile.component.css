@@ -1,0 +1,77 @@
+html * {
+  font-family: 'Archivo Narrow';
+}
+
+label {
+  font-family: 'Archivo Narrow';
+}
+
+.form_row {
+  width: 100%;
+  margin: 0 0 15px 0;
+}
+
+.form_row .mat-form-field {
+  width: 100%;
+}
+
+.form_row p {
+  font-family: 'Archivo Narrow';
+  font-size: 20px;
+  letter-spacing: 0.04em;
+}
+
+.form_row__checkboxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form_row__box {
+  margin: 0 0 0 0;
+  padding: 25px 45px 25px 25px;
+}
+
+.form_row__box img.icon {
+  width: 60px;
+  min-width: 60px;
+  margin: 0 0 10px 0;
+}
+
+.form_row__box._checked {
+  background: #eeeeee;
+}
+
+::ng-deep .mat-checkbox-layout {
+  text-align: center !important;
+}
+
+::ng-deep .mat-checkbox-inner-container {
+  width: 18px !important;
+  height: 18px !important;
+  margin: 10px 10px 0 0 !important;
+}
+
+.form_row__box .material-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3.2em;
+}
+
+.form_row .form_title {
+  font-size: 34px;
+  color: #9900FF;
+  font-family: 'Archivo Narrow';
+  letter-spacing: 0.04em;
+}
+
+section.section {
+  padding: 0 0 30px 0;
+}
+/*# sourceMappingURL=profile.component.css.map */

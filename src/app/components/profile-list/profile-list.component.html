@@ -1,0 +1,14 @@
+<section class="section profile-list">
+
+    <div class="profile-list__profile" *ngFor="let profile of profiles let i=index">
+      <div class="profile-list__profile-img-holder" [ngStyle]="{'background-image':'url(' + profilePic(profile.pic) + ')'}"></div>
+      <h3 class="profile-list__profile-title">{{profile.name}}</h3>
+      <div class="profile-list__profile-icons">
+        <img *ngFor="let fact of profile.living_factors let i=index" class="profile-list__profile-icon" src="assets/icon/{{fact}}" />
+      </div>
+      <div class="profile-list__actions">
+        <button class="profile-list__action">Say hello!</button>
+      </div>
+    </div>
+
+</section>

@@ -1,0 +1,65 @@
+<ion-card class="welcome-card">
+  <ion-card-content>
+
+    <file-upload></file-upload>
+
+    <form [formGroup]="profileForm" (ngSubmit)="saveForm()">
+
+      <input type="hidden" formControlName="pic" />
+      
+      <section class="section">
+        <mat-form-field>
+          <input matInput formControlName="name" placeholder="name">
+        </mat-form-field>
+      </section>
+
+      <section class="section">
+        <div class="form_row">
+          <h3 class="form_title">Din sökprofil för kollektivboende</h3>
+        </div>
+        <div class="form_row form_row__checkboxes">
+          <div class="form_row__box" formArrayName="time_frames" *ngFor="let time of time_frames; let i = index">
+            <mat-checkbox value={{time.val}} [formControlName]="i">{{time.name}}</mat-checkbox>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="form_row">
+          <h3 class="form_title">Stadsdelar för boende</h3>
+        </div>
+        <div class="form_row">
+          <mat-form-field>
+            <input matInput formControlName="location" placeholder="Söker boende i... ange stad">
+          </mat-form-field>
+        </div>
+      </section>
+      
+      <section class="section">
+        <div class="form_row">
+          <h3 class="form_title">Pris för boende / månad</h3>
+        </div>
+        <div class="form_row">
+          
+          <mat-radio-group formControlName="cost_monthly">
+            <mat-radio-button *ngFor="let cost of cost_monthly let i=index" [value]="i">{{cost.name}}</mat-radio-button>
+          </mat-radio-group>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="form_row form_row__checkboxes">
+          <div class="form_row__box {{factor.value === true ? '_checked' : ''}}" formArrayName="living_factors" *ngFor="let factor of profileForm.controls.living_factors.controls let i=index">
+            <mat-checkbox value={{living_factors[i].val}} [formControlName]="i">
+              <img class="icon" src="assets/icon/{{living_factors[i].icon}}" />
+              {{living_factors[i].name}}
+            </mat-checkbox>
+          </div>
+        </div>
+      </section>
+
+      <button mat-button type="submit">Spara!</button>
+    </form>
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,67 @@
+.profile-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.profile-list__profile {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  padding: 0 10px 40px 10px;
+}
+
+.profile-list__profile-img-holder {
+  display: block;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.profile-list__profile-img-holder:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+  /* initial ratio of 1:1*/
+}
+
+.profile-list__profile-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.profile-list__profile-title {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.profile-list__profile-icons {
+  display: block;
+  text-align: center;
+}
+
+.profile-list__profile-icon {
+  width: 40px;
+  margin: 0 6px;
+}
+
+.profile-list__actions {
+  text-align: center;
+}
+
+.profile-list__action {
+  padding: 10px;
+  margin: 25px 10px 20px 10px;
+}
+/*# sourceMappingURL=profile-list.component.css.map */
